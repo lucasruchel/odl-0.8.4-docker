@@ -1,14 +1,15 @@
-FROM java:8-jdk 
+FROM openjdk:11.0.6-jre
 
 RUN mkdir /odl
 
 WORKDIR /odl
 
-RUN wget https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.4/karaf-0.8.4.tar.gz && \
-    tar -xzf karaf-0.8.4.tar.gz
+RUN wget https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/opendaylight/0.12.0/opendaylight-0.12.0.tar.gz && \
+    tar -xzf opendaylight-0.12.0.tar.gz && \
+    rm opendaylight-0.12.0.tar.gz 
 
 
 
-ENTRYPOINT "/odl/karaf-0.8.4/bin/karaf"
+ENTRYPOINT "/odl/opendaylight-0.12.0/bin/karaf"
 
 EXPOSE 8101 8181 6633

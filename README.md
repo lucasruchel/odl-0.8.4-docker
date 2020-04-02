@@ -1,10 +1,18 @@
 # Opendaylight image!
 
-Image built with Opendaylight Nitrogen-SR4, without features installed.
+Image built with Opendaylight Nitrogen-SR4 and Magnesium, without features installed.
 
 # Files
 
-Distribution files are under  **/odl/karaf-0.8.4/**
+Distribution files are under  **/odl/<release>/**
+
+
+# Available Versions
+
+0.8.4
+
+0.12.0
+
 
 
 

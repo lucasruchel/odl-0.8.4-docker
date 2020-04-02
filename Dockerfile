@@ -12,4 +12,6 @@ RUN wget https://nexus.opendaylight.org/content/repositories/opendaylight.releas
 
 ENTRYPOINT "/odl/opendaylight-0.12.0/bin/karaf"
 
-EXPOSE 8101 8181 6633
+CMD ["server"]
+
+EXPOSE 8101 8181 6633 6640 6653 9876
